@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class NavbarService {
 
   public navbarActiveField:string="";
+  public selectProductFlag:boolean=false;
   constructor() { }
 }

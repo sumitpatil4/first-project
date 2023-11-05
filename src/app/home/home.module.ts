@@ -10,12 +10,14 @@ import { ProductReducer } from '../state/home/home.reducer';
 import { HttpClientModule } from '@angular/common/http';
 import { EffectsModule } from '@ngrx/effects';
 import { ProductEffects } from '../state/home/home.effects';
+import { ProductComponent } from './product/product.component';
 
 
 @NgModule({
   declarations: [
     HomepageComponent,
     ProductListComponent,
+    ProductComponent,
   ],
   imports: [
     CommonModule,

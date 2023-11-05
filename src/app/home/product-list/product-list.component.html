@@ -1,17 +1,20 @@
 <div class="product-list-container">
-    <div class="item" *ngFor="let product of productList">
-        <div class="item-container">
-            <div class="item-image">
-                <img src="{{product.image}}" alt="">
+    <app-product *ngIf="this._ns.selectProductFlag === true" [product]="selectedProduct"></app-product>
+    <div *ngIf="this._ns.selectProductFlag === false" class="product-list">
+        <div class="item" *ngFor="let product of productList">
+            <div (click)="selectProduct(product)" class="item-container">
+                <div class="item-image">
+                    <img src="{{product.image}}" alt="">
+                </div>
+                <div class="item-desc">
+                    <span class="item-name">{{product.title}}</span><br>
+                    <span class="item-price">&#8377;{{product.price}}</span>
+                </div>
             </div>
-            <div class="item-desc">
-                <span class="item-name">{{product.title}}</span><br>
-                <span class="item-price">&#8377;{{product.price}}</span>
+            <div class="buttons-container">
+                <button class="buy-now-btn">Buy Now</button>
+                <button class="add-cart-btn">Add to Cart</button>
             </div>
-        </div>
-        <div class="buttons-container">
-            <button class="buy-now-btn">Buy Now</button>
-            <button class="add-cart-btn">Add to Cart</button>
         </div>
     </div>
 </div>

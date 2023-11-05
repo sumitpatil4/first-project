@@ -1,0 +1,16 @@
+import { Component, Input } from '@angular/core';
+import { NavbarService } from 'src/app/shared/service/navbar.service';
+import { ProductModel } from '../model/product-model';
+
+@Component({
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
+})
+export class ProductComponent {
+
+  @Input() product!:ProductModel;
+  constructor(){
+  }
+  
+}

@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit{
   }
 
   itemClicked(value:string){
+    this._ns.selectProductFlag=false;
     if(value === 'login' && this.loginFlag===true){
       this.store.dispatch(saveLoginDetails({loginDetails:{email:'',password:'',loginFlag:false}}));
       this.getLoginState();

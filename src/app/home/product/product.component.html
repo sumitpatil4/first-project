@@ -1,0 +1,25 @@
+<div class="product-container">
+    <div class="product-image">
+        <div class="image">
+            <img src="{{product.image}}" alt="">
+        </div>
+        <div class="buttons">
+            <button class="buy-now-btn">Buy Now</button>
+            <button class="buy-now-btn">Add to Cart</button>
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="header">
+            <p>{{product.title}}</p><br>
+            <p>{{product.rating?.rate}} &#11088;</p>
+        </div>
+        <div class="price">
+            <p>&#8377;{{product.price}}</p>
+        </div>
+        <div class="features">
+            <ul *ngFor="let point of product.description?.split(';')">
+                <li>{{point}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
