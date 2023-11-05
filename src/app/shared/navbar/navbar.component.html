@@ -1,0 +1,15 @@
+<div class="navbar">
+    <div class="navbar-logo">
+        <div class="logo-container">
+            <img src="../../../assets/bag.png" alt="">
+        </div>
+    </div>
+    <div class="navbar-items">
+        <div [ngStyle]="_ns.navbarActiveField==='home'?{'border-bottom':'3px solid white'}:{}" (click)="itemClicked('home')" class="item">
+            <span>Home</span>
+        </div>
+        <div [innerText]="loginFlag?'Logout':'Login'" [ngStyle]="_ns.navbarActiveField==='login'?{'border-bottom':'3px solid white'}:{}" (click)="itemClicked('login')" class="item">
+            <span></span>
+        </div>
+    </div>
+</div>

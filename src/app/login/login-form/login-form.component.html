@@ -1,0 +1,29 @@
+<div class="form-box">
+    <div class="form-header">
+        <div class="header-image">
+            <img src="../../../assets/user.png" alt="">
+        </div>
+        <div class="header-text">
+            <span>Login</span>
+        </div>
+    </div>
+    <div class="form-field">
+        <form [formGroup]="loginDetailsForm" action="">
+            <div class="field">
+                <input placeholder="Email" type="text" formControlName="email">
+                <div class="error">
+                    <p *ngIf="formSubmitted && loginDetailsForm.get('email')?.invalid">*Invalid email</p>
+                </div>
+            </div>
+            <div class="field">
+                <input placeholder="Password" type="password" formControlName="password">
+                <div class="error">
+                    <p *ngIf="formSubmitted && loginDetailsForm.get('password')?.invalid">*Password must contain at least 8 characters"</p>
+                </div>
+            </div>
+            <div class="btn">
+                <button (click)="onSubmit()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
